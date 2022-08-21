@@ -14,7 +14,7 @@ async function fetchQuote(): Promise<Quote> {
 
 async function displayQuote(): Promise<void> {
   const quote = await fetchQuote();
-  if (quoteElement) quoteElement.innerText = quote.content;
+  if (quoteElement) quoteElement.innerText = `"${quote.content}"`;
   if (authorElement) authorElement.innerText = quote.author;
 }
 

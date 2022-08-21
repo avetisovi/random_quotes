@@ -21,7 +21,7 @@ function displayQuote() {
     return __awaiter(this, void 0, void 0, function* () {
         const quote = yield fetchQuote();
         if (quoteElement)
-            quoteElement.innerText = quote.content;
+            quoteElement.innerText = `"${quote.content}"`;
         if (authorElement)
             authorElement.innerText = quote.author;
     });
